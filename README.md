@@ -9,10 +9,10 @@ var request_set = new Finalize(function() {
 });
 
 // To add an item to the queue
-var first_item = request_set.queue();
+var hook1 = request_set.queue();
 
 // Let's add another item
-var second_item = request_set.queue();
+var hook2 = request_set.queue();
 
 // The code inside the final callback will only be called after
 // all the items in queue are completed.
@@ -20,14 +20,14 @@ var second_item = request_set.queue();
 jQuery.get('http://example.com', function(data) {
     // We now have the response from the first request
     // Remove one item from queue by calling the item's name
-    first_item();
+    hook1();
 });
 
 // The items can also be removed by passing them directly as callback
-jQuery.get('http://example.com', second_item);
+jQuery.get('http://example.com', hook2);
 
 // You can even skip declaring items and create them on the fly as the callback function
-jQuery.get('http://example.com', request_set.queue());
+jQuery.get('http://example.com', request_set.queue()); // hook3
 
 // After you've added all items to the queue we need to execute it
 request_set.exec();
