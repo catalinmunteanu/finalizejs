@@ -1,0 +1,28 @@
+{
+  "name": "finalizejs",
+  "version": "0.0.1",
+  "description": "JavaScript Asynchronous Requests Queue",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catalinmunteanu/finalizejs.git"
+  },
+  "keywords": [
+    "javascript",
+    "asynchronous",
+    "queue",
+    "callback"
+  ],
+  "author": "Catalin MUNTEANU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/catalinmunteanu/finalizejs/issues"
+  },
+  "homepage": "https://github.com/catalinmunteanu/finalizejs#readme",
+  "dependencies": {
+    "mocha": "^5.1.1"
+  }
+}
